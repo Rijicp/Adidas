@@ -11,8 +11,9 @@ data=requests.get(url).content
 file=open(r"/home/rijicp/output.txt","w")
 #file.write(datas)
 csv_writer=csv.writer(file)
-#reads=csv.reader(file)
+
 for i in data:
 	csv_writer.writerow(i)
-#print reads
+reads=csv.reader(file)
+print reads
 file.close()
